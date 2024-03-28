@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "cw-4-oop"
+version = "0.1.0"
+description = ""
+authors = ["AlexTalko <talko.alexander@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+requests = "^2.31.0"
+colorama = "^0.4.6"
+pytest = "^8.1.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
