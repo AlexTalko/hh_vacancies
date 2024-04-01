@@ -39,13 +39,13 @@ def user_interaction():
         print(Fore.LIGHTBLUE_EX + f'{vacs_list[i]}')
 
     # запрашиваем удаление файла вакансий
-    delete_file = input(Fore.LIGHTBLUE_EX + 'Удалить файл вакансий(y/n)?')
-    if delete_file in ['y', 'yes', 'да']:
+    delete_file = input(Fore.LIGHTBLUE_EX + 'Удалить файл вакансий(y/n)?').lower()
+    if delete_file in ['y', 'yes', 'да', 'г']:
         file.delete_file('vacancies.json')
 
     # запрашиваем у пользователя закончить работу или начать заново
-    user_option = input(Fore.LIGHTBLUE_EX + 'Начать поиск заново?(y/n)?')
-    if user_option in ['y', 'yes', 'да']:
+    user_option = input(Fore.LIGHTBLUE_EX + 'Начать поиск заново?(y/n)?').lower()
+    if user_option in ['y', 'yes', 'да', 'г']:
         print(Fore.LIGHTMAGENTA_EX + '***MAGIC MOMENT***')
         user_interaction()
     else:
