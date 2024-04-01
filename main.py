@@ -46,7 +46,7 @@ def user_interaction():
     # запрашиваем у пользователя закончить работу или начать заново
     user_option = input(Fore.LIGHTBLUE_EX + 'Начать поиск заново?(y/n)?')
     if user_option in ['y', 'yes', 'да']:
-        print(Fore.LIGHTRED_EX + 'Начать заново')
+        print(Fore.LIGHTMAGENTA_EX + '***MAGIC MOMENT***')
         user_interaction()
     else:
         print(Fore.LIGHTYELLOW_EX + 'Программа завершена. Удачи!')
