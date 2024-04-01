@@ -1,3 +1,6 @@
+from colorama import *
+
+
 class Vacancy:
     """
     Класс для работы с вакансиями
@@ -16,7 +19,7 @@ class Vacancy:
                 f"{self.requirement_vacs}")
 
     def __str__(self):
-        return (f'Вакансия: {self.name}\n'
+        return (Fore.LIGHTYELLOW_EX + f'Вакансия: {self.name}\n'
                 f'Ссылка: {self.url}\n'
                 f'Город: {self.city}\n'
                 f'Описание: {self.desc}\n'
@@ -86,9 +89,11 @@ class Vacancy:
             self.salary_vacs = "Зарплата не указана"
             return self.salary_vacs
         if self.salary_vacs['to'] is None:
-            return f"{self.salary_vacs['from']} {self.salary_vacs['currency']}"
+            return f"От {self.salary_vacs['from']} {self.salary_vacs['currency']}"
+        if self.salary_vacs['from'] is None:
+            return f"До {self.salary_vacs['to']} {self.salary_vacs['currency']}"
         else:
-            return f"От {self.salary_vacs['from']} до {self.salary_vacs['to']}, {self.salary_vacs['currency']}"
+            return f"От {self.salary_vacs['from']} до {self.salary_vacs['to']} {self.salary_vacs['currency']}"
 
     @property
     def requirement(self):

@@ -63,11 +63,11 @@ class JSONSaver(Saver):
         os.chdir('data/')
         with open(self.file_save, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=4)
-            print(Fore.GREEN + 'Информация о вакансиях сохранена в файл vacancies.json' + Fore.RESET)
+            print(Fore.GREEN + 'Информация о вакансиях сохранена в файл vacancies.json\n' + Fore.RESET)
 
     def delete_file(self, file_del) -> None:
         """
         Удаление файла вакансий
         """
         os.remove(file_del)
-        print(Fore.GREEN + f'Файл {file_del} удален' + Fore.RESET)
+        print(Fore.GREEN + f'Файл {file_del} удален\n' + Fore.RESET)
