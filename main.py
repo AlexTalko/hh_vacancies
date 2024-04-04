@@ -33,6 +33,7 @@ def user_interaction():
 
     # запрашиваем N количество для вывода вакансий
     n = int(input(Fore.GREEN + 'Введите количество вакансий для вывода: '))
+    print(Fore.LIGHTMAGENTA_EX + 'Найдены вакансии:\n')
 
     # выводим N вакансий
     for i in range(n):
@@ -44,7 +45,7 @@ def user_interaction():
         file.delete_file('vacancies.json')
 
     # запрашиваем у пользователя закончить работу или начать заново
-    user_option = input(Fore.LIGHTBLUE_EX + 'Начать поиск заново?(y/n)?').lower()
+    user_option = input(Fore.LIGHTBLUE_EX + 'Начать поиск заново(y/n)?').lower()
     if user_option in ['y', 'yes', 'да', 'н']:
         print(Fore.LIGHTMAGENTA_EX + '***MAGIC MOMENT***')
         user_interaction()
