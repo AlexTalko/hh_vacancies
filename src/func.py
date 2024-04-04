@@ -17,3 +17,6 @@ def sort_salary_from(vacs_list, user_option_sort):
     if user_option_sort == 3:
         print(Fore.LIGHTRED_EX + 'Без сортировки списка вакансий')
         return vacs_list
+    else:
+        print(Fore.LIGHTRED_EX + 'Без сортировки списка вакансий')
+        return vacs_list
