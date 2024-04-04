@@ -17,7 +17,7 @@ def vacs():
                     'https://www.hh.ru/vacancy/1234567',
                     'Саранск',
                     None,
-                    {'from': None, 'to': 10000, 'currency': 'RUR'},
+                    {'from': 20000, 'to': None, 'currency': 'RUR'},
                     None
                     )
     vacs3 = Vacancy('Курьер',
@@ -36,10 +36,11 @@ def vacs():
 def test_sort_salary_from(vacs):
     vacs_list = vacs
     sort_salary_from(vacs_list, 1)  # тест сортировки по возрастанию
-    assert vacs_list[0].salary == 'До 10000 RUR'
-    assert vacs_list[1].salary == 'От 1000 до 10000 RUR'
+    assert vacs_list[0].salary == 'От 1000 до 10000 RUR'
+    assert vacs_list[1].salary == 'От 20000 RUR'
     assert vacs_list[2].salary == 'От 80000 до 90000 RUR'
     sort_salary_from(vacs_list, 2)  # тест сортировки по убыванию
     assert vacs_list[0].salary == 'От 80000 до 90000 RUR'
-    assert vacs_list[1].salary == 'От 1000 до 10000 RUR'
+    assert vacs_list[1].salary == 'От 20000 RUR'
     assert isinstance(vacs_list, list) is True
+
