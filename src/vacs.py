@@ -19,12 +19,12 @@ class Vacancy:
                 f"{self.requirement_vacs}")
 
     def __str__(self):
-        return (Fore.LIGHTYELLOW_EX + f'Вакансия: {self.name}\n'
-                f'Ссылка: {self.url}\n'
-                f'Город: {self.city}\n'
-                f'Описание: {self.desc}\n'
-                f'Зарплата: {self.salary}\n'
-                f'Требования: {self.requirement}')
+        return (f'Вакансия: {Fore.LIGHTYELLOW_EX}{self.name}{Fore.RESET}\n'
+                f'Ссылка: {Fore.LIGHTGREEN_EX}{self.url}{Fore.RESET}\n'
+                f'Город: {Fore.LIGHTGREEN_EX}{self.city}{Fore.RESET}\n'
+                f'Описание: {Fore.LIGHTYELLOW_EX}{self.desc}{Fore.RESET}\n'
+                f'Зарплата: {Fore.LIGHTGREEN_EX}{self.salary}{Fore.RESET}\n'
+                f'Требования: {Fore.LIGHTYELLOW_EX}{self.requirement}{Fore.RESET}\n')
 
     def __gt__(self, other):
         """
