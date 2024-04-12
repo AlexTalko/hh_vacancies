@@ -5,6 +5,7 @@ from colorama import *
 
 
 def user_interaction():
+
     """Функция для взаимодействия с пользователем"""
     print(Fore.LIGHTBLUE_EX + 'Добро пожаловать в мини версию HH.ru!')
     user_query = str(input('Какую вакансию хотите найти?\n'
